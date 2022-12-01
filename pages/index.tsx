@@ -1,9 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import Banner from "../components/Banner/Banner";
 import Blogs from "../components/Blog/Blogs";
 import FAQ from "../components/FAQ/FAQ";
 import Featured from "../components/Featured/Featured";
+import Footer from "../components/Footer/Footer";
 import HashingBits from "../components/HasingBits/HashingBits";
 import Header from "../components/Header/Header";
 import LatestWork from "../components/LatestWork/LatestWork";
@@ -25,6 +27,8 @@ const Home: NextPage = () => {
       <FAQ />
       <Blogs />
       <HashingBits />
+      <Banner />
+      <Footer />
     </div>
   );
 };
