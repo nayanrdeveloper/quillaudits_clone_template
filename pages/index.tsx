@@ -1,6 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import Blogs from "../components/Blog/Blogs";
+import FAQ from "../components/FAQ/FAQ";
 import Featured from "../components/Featured/Featured";
 import Header from "../components/Header/Header";
 import LatestWork from "../components/LatestWork/LatestWork";
@@ -19,6 +21,8 @@ const Home: NextPage = () => {
       <LatestWork />
       <Featured />
       <Testimonial />
+      <FAQ />
+      <Blogs />
     </div>
   );
 };
