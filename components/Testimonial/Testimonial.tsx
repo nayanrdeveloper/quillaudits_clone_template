@@ -1,12 +1,18 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Scrollbar, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import AOS from "aos";
+import "aos/dist/aos.css";
 function Testimonial() {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  });
   const testimonialList = [
     {
       name: "StackOS",
@@ -45,7 +51,7 @@ function Testimonial() {
     },
   ];
   return (
-    <div className="py-4 px-20 container mt-10">
+    <div className="py-4 px-20 container mt-10" data-aos="zoom-out-right">
       <div className="flex flex-col flex-wrap gap-3">
         <h3 className="text-light-blue uppercase">Testimonial</h3>
         <div className="flex justify-between">

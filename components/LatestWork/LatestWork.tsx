@@ -1,16 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-// import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-// import { Carousel } from 'react-responsive-carousel';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Scrollbar, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import AOS from "aos";
+import "aos/dist/aos.css"; 
 
 function LatestWork() {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  });
   const [selectedCategory, setSelectedCategory] = useState<string>("");
   const workFilterCategory = ["Ethereum", "Binance SC", "NFT", "Solana"];
   const auditReportList = [
@@ -52,7 +56,7 @@ function LatestWork() {
     },
   ];
   return (
-    <div className="bg-gradient-light-blue container">
+    <div className="bg-gradient-light-blue container" data-aos="fade-up">
       <div className="py-4 px-20 flex flex-col gap-2 justify-center items-center">
         <h3 className="text-light-blue uppercase">Portfolio</h3>
         <h2 className="text-white font-semibold text-2xl">Latest Work</h2>

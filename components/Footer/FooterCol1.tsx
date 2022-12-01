@@ -1,7 +1,13 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function FooterCol1() {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  });
   const languageList = [
     {
       name: "U.S.",
@@ -19,7 +25,7 @@ function FooterCol1() {
   const [selectedLanguage, setSelectedLanguage] = useState(languageList[0]);
   const [showLanguage, setShowLanguage] = useState(false);
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2" data-aos="fade-right">
       <h5 className="font-bold">Parent Company</h5>
       <Image src={"/logo.png"} alt={"Logo"} width={100} height={100} />
       <span>

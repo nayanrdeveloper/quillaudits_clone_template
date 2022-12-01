@@ -1,7 +1,13 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function SocialMedia() {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  });
   const socialMediaList = [
     {
       image: "/facebook.svg",
@@ -21,12 +27,12 @@ function SocialMedia() {
     },
   ];
   return (
-    <div className="flex flex-col gap-2 items-center justify-center">
+    <div className="flex flex-col gap-2 items-center justify-center" data-aos="zoom-in">
       <h5 className="font-semibold">Join our Journey</h5>
       <ul className="flex gap-4">
         {socialMediaList.map((socialData) => {
           return (
-            <li>
+            <li className="cursor-pointer">
               <Image
                 src={socialData.image}
                 alt={socialData.image}

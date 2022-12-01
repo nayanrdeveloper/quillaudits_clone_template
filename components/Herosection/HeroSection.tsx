@@ -1,7 +1,13 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; 
 
 function HeroSection() {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  });
   interface headerDataStruct {
     amount: string;
     desc: string;
@@ -23,7 +29,7 @@ function HeroSection() {
   return (
     <div className="container py-4 px-20 mt-10">
       <div className="grid grid-cols-1 md:grid-cols-2 md:space-x-28 items-center">
-        <div className="flex flex-col flex-wrap gap-8">
+        <div className="flex flex-col flex-wrap gap-8" data-aos="fade-up-right">
           <h3 className="font-bold text-3xl opacity-70">
             Emerging Web3 Ventures Trust Our Smart Contract Audits and Diligence
             Services
@@ -38,7 +44,7 @@ function HeroSection() {
             <button className="btn-transparent">Explore Services</button>
           </div>
         </div>
-        <div>
+        <div data-aos="fade-up-left">
           <Image
             src={"/Work_7.jpg"}
             width={400}

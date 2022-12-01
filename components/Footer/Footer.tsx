@@ -17,8 +17,8 @@ function Footer() {
         <FooterCol4 />
       </div>
       <SocialMedia />
-      <div className="text-center p-2 mt-5">
-        <p>
+      <div className="text-center p-2 mt-5 border-t border-[#3A3C56]"> 
+        <p className="mt-5">
           All Rights Reserved. © Copyright 2022. QuillHash Technologies Private
           Limited
         </p>

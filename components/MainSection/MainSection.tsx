@@ -1,7 +1,13 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
 function MainSection() {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  })
   const deployPlatforms = [
     {
       name: "Ethereum",
@@ -28,7 +34,7 @@ function MainSection() {
     <div className="container py-4 px-32 mt-10">
       <div className="flex flex-col">
         <div className="flex gap-3 justify-between items-center">
-          <div>
+          <div data-aos="fade-right">
             <Image
               src={"/main_section.jpg"}
               alt={"main"}
@@ -36,7 +42,7 @@ function MainSection() {
               height={900}
             />
           </div>
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1" data-aos="fade-left">
             <h4 className="text-light-blue">Service</h4>
             <h3 className="text-light-black font-semibold text-2xl">
               Smart Contract Auditing
@@ -66,7 +72,7 @@ function MainSection() {
           </div>
         </div>
         <div className="flex gap-3 justify-between items-center">
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1" data-aos="fade-right">
             <h4 className="text-light-blue">Service</h4>
             <h3 className="text-light-black font-semibold text-2xl">
               Blockchain Penetration Testing
@@ -77,7 +83,7 @@ function MainSection() {
               pentesting approach and dynamic blockchain analysis.
             </p>
           </div>
-          <div>
+          <div data-aos="fade-left">
             <Image
               src={"/meeting-6004997_640.png"}
               alt={"main"}
@@ -87,15 +93,10 @@ function MainSection() {
           </div>
         </div>
         <div className="flex gap-3 justify-between items-center">
-          <div>
-            <Image
-              src={"/part_2.jpg"}
-              alt={"main"}
-              width={900}
-              height={900}
-            />
+          <div data-aos="fade-right">
+            <Image src={"/part_2.jpg"} alt={"main"} width={900} height={900} />
           </div>
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1" data-aos="fade-left">
             <h4 className="text-light-blue">Service</h4>
             <h3 className="text-light-black font-semibold text-2xl">
               Due Diligence
