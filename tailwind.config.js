@@ -15,6 +15,7 @@ module.exports = {
       backgroundImage: {
         "gradient-blue": "linear-gradient(#7184FD, #3F7AF0,#4F37EE)",
         "gradient-light-blue": "linear-gradient(#212D6B, #1D2B5F,#121D46,#182A5D)",
+        'email': "url('/email.svg')",
       },
       boxShadow: {
         'dark-blue': "5px 8px 10px #00000029",

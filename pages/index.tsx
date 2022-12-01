@@ -4,6 +4,7 @@ import Image from "next/image";
 import Blogs from "../components/Blog/Blogs";
 import FAQ from "../components/FAQ/FAQ";
 import Featured from "../components/Featured/Featured";
+import HashingBits from "../components/HasingBits/HashingBits";
 import Header from "../components/Header/Header";
 import LatestWork from "../components/LatestWork/LatestWork";
 import MainSection from "../components/MainSection/MainSection";
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
       <Testimonial />
       <FAQ />
       <Blogs />
+      <HashingBits />
     </div>
   );
 };
