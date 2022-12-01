@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+  color: #fff;
+}
+
+@layer components {
+    .btn-primary {
+      @apply bg-gradient-blue rounded py-2 px-6 text-white md:ml-8 shadow-dark-blue opacity-95;
+    }
+
+    .btn-transparent{
+      @apply rounded py-2 px-6 text-white md:ml-8 shadow-dark-blue opacity-95 bg-transparent;
+    }
+  }
