@@ -27,7 +27,7 @@ function Navbar() {
     },
   ];
   return (
-    <div className="items-center justify-between py-4 px-7 md:flex md:px-10">
+    <nav className="items-center justify-between py-4 px-7 md:flex md:px-10">
       <div className="flex mx-4 cursor-pointer items-center justify-between font-[Poppins] text-2xl font-bold text-gray-800">
         <span className="mr-1 pt-2 text-3xl text-indigo-600">
           {" "}
@@ -75,7 +75,7 @@ function Navbar() {
           <button className="btn-primary">Request an Audit</button>
         </div>
       </ul>
-    </div>
+    </nav>
   );
 }
 

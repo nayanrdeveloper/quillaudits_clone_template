@@ -8,7 +8,7 @@ function HashingBits() {
       <div className="flex flex-wrap justify-between gap-5">
         <div className="flex flex-col gap-3">
           <Image
-            src={"/hasing_bits.svg"}
+            src={"/hasing_bits.png"}
             alt={"hashing bits"}
             height={200}
             width={200}

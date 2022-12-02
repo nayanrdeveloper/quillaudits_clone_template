@@ -1,9 +1,12 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
-
 function FooterCol1() {
-  const languageList = [
+  interface languageStruct {
+    name: string;
+    image: string;
+  }
+  const languageList: languageStruct[] = [
     {
       name: "U.S.",
       image: "/usa_flag.png",
@@ -17,8 +20,10 @@ function FooterCol1() {
       image: "/spen.png",
     },
   ];
-  const [selectedLanguage, setSelectedLanguage] = useState(languageList[0]);
-  const [showLanguage, setShowLanguage] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState<languageStruct>(
+    languageList[0]
+  );
+  const [showLanguage, setShowLanguage] = useState<boolean>(false);
   return (
     <div className="flex flex-col gap-2">
       <h5 className="font-bold">Parent Company</h5>

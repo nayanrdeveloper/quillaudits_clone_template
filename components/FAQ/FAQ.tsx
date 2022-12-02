@@ -42,7 +42,7 @@ function FAQ() {
             Visit our help center to clear out any second thoughts that you may
             have regarding our services.
           </p>
-          <button className="btn-primary w-36">Contact Us</button>
+          <button className="btn-primary w-36 hover:text-black">Contact Us</button>
         </div>
         <div className="flex flex-col mt-5 md:mt-0">
           {faqList.map((faqData, index) => {
@@ -65,7 +65,7 @@ function FAQ() {
                   />
                 </div>
                 <p
-                  className={`text-[#391400] mt-3 duration-300 ${
+                  className={`text-[#391400] mt-3 duration-200 transition-all ease-linear ${
                     index === selectedAccordion ? "" : "hidden"
                   }`}
                 >

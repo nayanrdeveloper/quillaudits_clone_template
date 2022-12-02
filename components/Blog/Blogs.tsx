@@ -1,9 +1,14 @@
-import Image from "next/image";
-import React, { useEffect } from "react";
-
+import React from "react";
+import BlogCard from "./BlogCard";
 
 function Blogs() {
-  const blogList = [
+  interface blogStruct {
+    title: string;
+    image: string;
+    date: string;
+    desc: string;
+  }
+  const blogList: blogStruct[] = [
     {
       title: "Web3 Security: Classification & Analysis of Web3 Hacks",
       image: "/blog_1.png",
@@ -31,19 +36,9 @@ function Blogs() {
           Catch up on the news
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-          {blogList.map((blog, index) => {
+          {blogList.map((blogData, index) => {
             return (
-              <div key={index} className="flex flex-col gap-2 p-2">
-                <Image
-                  src={blog.image}
-                  alt={blog.title}
-                  height={200}
-                  width={325}
-                />
-                <h3 className="text-light-blue font-semibold cursor-pointer">{blog.title}</h3>
-                <span className="text-light-black">{blog.date}</span>
-                <p className="text-light-black">{blog.desc}</p>
-              </div>
+              <BlogCard key={index} {...blogData} />
             );
           })}
         </div>

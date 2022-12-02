@@ -26,7 +26,7 @@ function FooterCol2() {
       <ul className="flex flex-col gap-2">
         {col1List.map((colo1Data) => {
           return (
-            <li className="cursor-pointer" key={colo1Data.name}>
+            <li className="cursor-pointer hover:text-light-blue duration-300" key={colo1Data.name}>
               <Link href={colo1Data.to}>{colo1Data.name}</Link>
             </li>
           );

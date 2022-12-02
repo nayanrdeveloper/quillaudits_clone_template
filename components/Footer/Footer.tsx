@@ -9,7 +9,7 @@ import SocialMedia from "./SocialMedia";
 
 function Footer() {
   return (
-    <div className="py-10 px-20 container bg-[#28293E]">
+    <footer className="py-10 px-20 container bg-[#28293E]">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
         <FooterCol1 />
         <FooterCol2 />
@@ -23,7 +23,7 @@ function Footer() {
           Limited
         </p>
       </div>
-    </div>
+    </footer>
   );
 }
 

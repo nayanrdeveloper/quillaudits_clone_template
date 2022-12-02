@@ -1,9 +1,13 @@
 import Image from "next/image";
-import React, { useEffect } from "react";
-
+import Link from "next/link";
+import React from "react";
 
 function SocialMedia() {
-  const socialMediaList = [
+  interface socialMediaStruct {
+    image: string;
+    to: string;
+  }
+  const socialMediaList: socialMediaStruct[] = [
     {
       image: "/facebook.svg",
       to: "/",
@@ -25,15 +29,17 @@ function SocialMedia() {
     <div className="flex flex-col gap-2 items-center justify-center">
       <h5 className="font-semibold">Join our Journey</h5>
       <ul className="flex gap-4">
-        {socialMediaList.map((socialData, index) => {
+        {socialMediaList.map((socialData: socialMediaStruct, index: number) => {
           return (
             <li className="cursor-pointer" key={index}>
-              <Image
-                src={socialData.image}
-                alt={socialData.image}
-                height={40}
-                width={40}
-              />
+              <Link href={socialData.to}>
+                <Image
+                  src={socialData.image}
+                  alt={socialData.image}
+                  height={40}
+                  width={40}
+                />
+              </Link>
             </li>
           );
         })}

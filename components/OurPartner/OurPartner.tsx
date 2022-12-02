@@ -2,7 +2,7 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 
 function OurPartner() {
-  const partnerList = [
+  const partnerList : string[] = [
     "/partner.png",
     "/partner.png",
     "/partner.png",
@@ -18,7 +18,7 @@ function OurPartner() {
         <div className="grid grid-cols-3 gap-3 md:gap-0 md:grid-cols-6">
           {partnerList.map((partner, index) => {
             return (
-              <div key={index}>
+              <div key={index} className="hover:scale-125 duration-200 transition-all ease-linear">
                 <Image src={partner} alt="" height={100} width={100} />
               </div>
             );

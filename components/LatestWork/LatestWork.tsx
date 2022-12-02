@@ -1,18 +1,26 @@
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Scrollbar, Pagination } from "swiper";
+import { Navigation, Pagination } from "swiper";
 import "swiper/css";
-import "swiper/css/scrollbar";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
+import WorkCard from "./WorkCard";
 
 function LatestWork() {
   const [selectedCategory, setSelectedCategory] = useState<string>("");
-  const workFilterCategory = ["Ethereum", "Binance SC", "NFT", "Solana"];
-  const auditReportList = [
+  const workFilterCategory: string[] = [
+    "Ethereum",
+    "Binance SC",
+    "NFT",
+    "Solana",
+  ];
+  interface auditReportStruct {
+    image: string;
+    name: string;
+    viewLink: string;
+    downloadLink: string;
+  }
+  const auditReportList: auditReportStruct[] = [
     {
       image: "/audit_report.png",
       name: "StackOS Audit Report",
@@ -81,30 +89,10 @@ function LatestWork() {
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
           >
-            {auditReportList.map((auditReport, index) => {
+            {auditReportList.map((auditReportData, index) => {
               return (
                 <SwiperSlide key={index}>
-                  <div className="flex flex-col gap-2 py-2 px-14 items-center justify-center w-96 h-96">
-                    <Image
-                      src={auditReport.image}
-                      alt=""
-                      height={150}
-                      width={150}
-                    />
-                    <h4>{auditReport.name}</h4>
-                    <div className="flex gap-4">
-                      <Link href={auditReport.viewLink}>
-                        <div className="bg-transparent border border-[#FFFFFF4B] rounded-md px-4 py-2">
-                          View
-                        </div>
-                      </Link>
-                      <Link href={auditReport.downloadLink}>
-                        <div className="bg-transparent border border-[#FFFFFF4B] rounded-md px-4 py-2">
-                          Download
-                        </div>
-                      </Link>
-                    </div>
-                  </div>
+                  <WorkCard {...auditReportData} />
                 </SwiperSlide>
               );
             })}

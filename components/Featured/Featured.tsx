@@ -1,9 +1,13 @@
-import Image from "next/image";
-import Link from "next/link";
-import React, { useEffect } from "react";
+import React from "react";
+import FeatureCard from "./FeatureCard";
 
 function Featured() {
-  const featureList = [
+  interface featureStruct {
+    name: string;
+    image: string;
+    link: string;
+  }
+  const featureList: featureStruct[] = [
     {
       name: "Coincrunch",
       image: "/Coincrunch_logo.png",
@@ -28,7 +32,7 @@ function Featured() {
       name: "Money Control",
       image: "/monet_control.png",
       link: "/",
-    }
+    },
   ];
   return (
     <div className="container">
@@ -38,25 +42,8 @@ function Featured() {
           As Featured In
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {featureList.map((feature) => {
-            return (
-              <div
-                className="flex flex-col p-5 justify-center items-center rounded-lg border border-[#2D83EE]"
-                key={feature.name}
-              >
-                <Image
-                  src={feature.image}
-                  alt={feature.name}
-                  height={200}
-                  width={200}
-                />
-                <Link href={feature.link}>
-                  <div className="cursor-pointer text-light-blue font-semibold">
-                    Read More
-                  </div>
-                </Link>
-              </div>
-            );
+          {featureList.map((featureData) => {
+            return <FeatureCard key={featureData.name} {...featureData} />;
           })}
         </div>
       </div>

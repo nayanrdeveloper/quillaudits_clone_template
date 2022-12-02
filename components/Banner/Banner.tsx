@@ -12,7 +12,7 @@ function Banner() {
                     <button className='text-black py-2 px-4 uppercase w-40 bg-white rounded-lg'>Apply Now</button>
                 </div>
                 <div>
-                    <Image src={'/business.jpeg'} width={500} height={500} alt={'business'} className='rounded-md opacity-80' />
+                    <Image src={'/business.jpg'} width={500} height={500} alt={'business'} className='rounded-md opacity-80' />
                 </div>
             </div>
         </div>
