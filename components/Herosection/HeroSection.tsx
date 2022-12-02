@@ -22,8 +22,8 @@ function HeroSection() {
     },
   ];
   return (
-    <div className="container py-4 px-20 mt-10">
-      <div className="grid grid-cols-1 md:grid-cols-2 md:space-x-28 items-center">
+    <div className="container py-4 px-3 md:px-20 mt-0 md:mt-10">
+      <div className="grid grid-cols-1 gap-0 md:gap-3 md:grid-cols-2 md:space-x-28 items-center">
         <div className="flex flex-col flex-wrap gap-8">
           <h3 className="font-bold text-3xl opacity-70">
             Emerging Web3 Ventures Trust Our Smart Contract Audits and Diligence
@@ -32,14 +32,14 @@ function HeroSection() {
           <p className="font-semibold text-2xl opacity-70">
             QuillAudits, Making web3 a safer place
           </p>
-          <div className="flex gap-2 flex-wrap">
+          <div className="flex gap-3 md:gap-2">
             <button className="btn-primary opacity-80">
               Request Free Quote
             </button>
             <button className="btn-transparent">Explore Services</button>
           </div>
         </div>
-        <div>
+        <div className="mt-5 md:mt-0">
           <Image
             src={"/Work_7.jpg"}
             width={400}
@@ -49,13 +49,13 @@ function HeroSection() {
           />
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 md:space-x-5 mt-10">
+      <div className="grid grid-cols-1 items-center md:grid-cols-3 md:gap-5 mt-10">
         {headerData.map((data, index) => {
           return (
-            <div key={index} className="flex justify-items-end gap-5  md:w-72">
+            <div key={index} className="flex justify-center items-center gap-5">
               <h3 className="text-2xl text-[#2D83EE] font-semibold">
                 {data.amount}
-              </h3>
+              </h3> 
               <span>{data.desc}</span>
             </div>
           );

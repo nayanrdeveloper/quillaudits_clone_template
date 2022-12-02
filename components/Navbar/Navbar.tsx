@@ -33,25 +33,14 @@ function Navbar() {
           {" "}
           <Image src={"/logo.png"} alt="" height={160} width={160} />{" "}
         </span>
-        <span
+        <Image
+          src={"/menu-bar.png"}
+          width={30}
+          height={30}
+          alt={"menu"}
+          className="right-8 top-6 text-3xl md:hidden"
           onClick={() => setOpen(!open)}
-          className=" right-8 top-6 text-3xl md:hidden"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </span>
+        />
       </div>
       <ul
         className={`md:flex transition-all duration-500 ease-in ${
@@ -70,7 +59,7 @@ function Navbar() {
             </Link>
           );
         })}
-        <div className="flex gap-3 md:gap-0">
+        <div className="flex gap-3 md:gap-3 md:ml-3">
           <button className="btn-primary ">Portfolio</button>
           <button className="btn-primary">Request an Audit</button>
         </div>

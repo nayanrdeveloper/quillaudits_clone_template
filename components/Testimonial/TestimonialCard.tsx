@@ -12,8 +12,8 @@ function TestimonialCard(testimonial: testimonialStruct) {
   return (
     <div className="flex flex-col gap-2 items-center justify-center p-2">
       <div className="flex gap-2 justify-center items-center">
-        <Image src={testimonial.image} alt="" width={60} height={60} />
-        <h3 className="text-black font-semibold text-2xl">
+        <Image src={testimonial.image} alt="" width={60} height={60} className="w-5 h-5 md:w-20 md:h-20" />
+        <h3 className="text-black font-semibold md:text-2xl">
           {testimonial.name}
         </h3>
       </div>

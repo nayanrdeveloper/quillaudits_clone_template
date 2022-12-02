@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import Audit from "../components/Audit/Audit";
 import Banner from "../components/Banner/Banner";
 import Blogs from "../components/Blog/Blogs";
 import FAQ from "../components/FAQ/FAQ";
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
       <MainSection />
       <Web3Steps />
       <LatestWork />
+      <Audit />
       <Featured />
       <Testimonial />
       <FAQ />

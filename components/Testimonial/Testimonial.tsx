@@ -62,7 +62,7 @@ function Testimonial() {
           </span>
           <button className="btn-primary hover:text-light-black duration-200 transition-all ease-linear">Read More</button>
         </div>
-        <div className="mt-5 container">
+        <div className="mt-5  container">
           <Swiper
             modules={[Navigation, Pagination]}
             spaceBetween={50}

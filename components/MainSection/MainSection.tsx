@@ -64,9 +64,10 @@ function MainSection() {
                 );
               })}
             </div>
+            <button className="btn-primary hover:text-black w-40">Explore</button>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 justify-between items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 mt-5 gap-3 justify-between items-center">
           <div className="flex flex-col gap-1">
             <h4 className="text-light-blue">Service</h4>
             <h3 className="text-light-black font-semibold text-2xl">
@@ -77,6 +78,7 @@ function MainSection() {
               blockchain technology comes with a mix-blend of conventional
               pentesting approach and dynamic blockchain analysis.
             </p>
+            <button className="btn-primary hover:text-black w-40">Learn More</button>
           </div>
           <div>
             <Image
@@ -87,7 +89,7 @@ function MainSection() {
             />
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 justify-between items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-5 justify-between items-center">
           <div>
             <Image src={"/part_2.jpg"} alt={"main"} width={900} height={900} />
           </div>
@@ -101,6 +103,7 @@ function MainSection() {
               contracts, which can lead to many critical possibilities. DeFi Due
               Diligence NFT Due Diligence Rug Pull Due Diligence
             </p>
+            <button className="btn-primary hover:text-black w-40">Explore</button>
           </div>
         </div>
       </div>
