@@ -1,13 +1,8 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css"; 
+
 
 function FAQ() {
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  });
   const [selectedAccordion, setSelectedAccordion] = useState<number>(0);
   const faqList = [
     {
@@ -38,7 +33,7 @@ function FAQ() {
   return (
     <div className="py-4 px-3 md:px-20 container mt-10">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
-        <div className="flex flex-col gap-3" data-aos="fade-right">
+        <div className="flex flex-col gap-3">
           <h3 className="text-light-blue uppercase">FAQ</h3>
           <p className="text-[#391400] font-bold text-2xl">
             Frequently Asked Questions
@@ -49,7 +44,7 @@ function FAQ() {
           </p>
           <button className="btn-primary w-36">Contact Us</button>
         </div>
-        <div className="flex flex-col mt-5 md:mt-0" data-aos="fade-left">
+        <div className="flex flex-col mt-5 md:mt-0">
           {faqList.map((faqData, index) => {
             return (
               <div

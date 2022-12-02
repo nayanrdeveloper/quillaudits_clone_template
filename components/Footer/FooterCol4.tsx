@@ -1,14 +1,9 @@
 import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 
 function FooterCol4() {
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  });
   return (
-    <div className="" data-aos="fade-left">
+    <div className="">
       <address className="flex flex-col gap-2">
         <h5 className="font-semibold">Contact Us</h5>
         <span>

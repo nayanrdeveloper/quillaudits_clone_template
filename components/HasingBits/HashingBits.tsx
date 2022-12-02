@@ -1,16 +1,11 @@
 import Image from "next/image";
 import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css"; 
+
 
 function HashingBits() {
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  });
   return (
     <div className="py-10 px-3 md:px-20 container mt-10 bg-gradient-light-blue relative z-10">
-      <div className="flex flex-wrap justify-between gap-5" data-aos="fade-right">
+      <div className="flex flex-wrap justify-between gap-5">
         <div className="flex flex-col gap-3">
           <Image
             src={"/hasing_bits.svg"}
@@ -39,7 +34,7 @@ function HashingBits() {
             </p>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center" data-aos="fade-left">
+        <div className="flex flex-col items-center justify-center">
           <Image src={"/email.svg"} alt={"email"} width={300} height={300} className='absolute top-3 right-35 z-20 opacity-5' />
           <Image src={"/email.svg"} alt={"email"} width={200} height={200} />
         </div>

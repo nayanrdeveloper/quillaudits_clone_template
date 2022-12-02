@@ -6,13 +6,8 @@ import "swiper/css";
 import "swiper/css/scrollbar";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 function Testimonial() {
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  });
   const testimonialList = [
     {
       name: "StackOS",
@@ -51,7 +46,7 @@ function Testimonial() {
     },
   ];
   return (
-    <div className="py-4 px-3 md:px-20 container mt-10" data-aos="zoom-out-right">
+    <div className="py-4 px-3 md:px-20 container mt-10">
       <div className="flex flex-col flex-wrap gap-3 md:gap-3">
         <h3 className="text-light-blue uppercase">Testimonial</h3>
         <div className="flex flex-wrap gap-3 md:gap-0 justify-between">

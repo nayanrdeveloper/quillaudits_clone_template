@@ -1,13 +1,8 @@
 import Link from "next/link";
 import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 
 function FooterCol3() {
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  });
   const col2List = [
     {
       name: "Smart Contract Auditing",
@@ -23,7 +18,7 @@ function FooterCol3() {
     },
   ];
   return (
-    <div className="flex flex-col gap-2" data-aos="fade-left">
+    <div className="flex flex-col gap-2">
       <h5 className="font-semibold">Service</h5>
       <ul className="flex flex-col gap-2">
         {col2List.map((colo1Data) => {

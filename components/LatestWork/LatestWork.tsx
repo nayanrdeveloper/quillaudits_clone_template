@@ -7,14 +7,9 @@ import "swiper/css";
 import "swiper/css/scrollbar";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import AOS from "aos";
-import "aos/dist/aos.css"; 
+
 
 function LatestWork() {
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  });
   const [selectedCategory, setSelectedCategory] = useState<string>("");
   const workFilterCategory = ["Ethereum", "Binance SC", "NFT", "Solana"];
   const auditReportList = [
@@ -56,7 +51,7 @@ function LatestWork() {
     },
   ];
   return (
-    <div className="bg-gradient-light-blue container" data-aos="fade-up">
+    <div className="bg-gradient-light-blue container">
       <div className="py-4 px-3 md:px-20 flex flex-col gap-2 justify-center items-center">
         <h3 className="text-light-blue uppercase">Portfolio</h3>
         <h2 className="text-white font-semibold text-2xl">Latest Work</h2>

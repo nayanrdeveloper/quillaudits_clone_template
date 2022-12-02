@@ -1,13 +1,8 @@
 import Image from "next/image";
 import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 
 function Blogs() {
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  });
   const blogList = [
     {
       title: "Web3 Security: Classification & Analysis of Web3 Hacks",
@@ -29,7 +24,7 @@ function Blogs() {
     },
   ];
   return (
-    <div className="py-4 px-3 md:px-20 container mt-10" data-aos="zoom-out-left">
+    <div className="py-4 px-3 md:px-20 container mt-10">
       <div className="flex flex-col flex-wrap gap-3">
         <h3 className="text-light-blue uppercase">OUR BLOG</h3>
         <h2 className="text-light-black font-semibold text-2xl">

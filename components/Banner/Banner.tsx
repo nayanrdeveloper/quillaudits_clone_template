@@ -1,15 +1,9 @@
 import Image from 'next/image'
 import React, { useEffect } from 'react'
-import AOS from "aos";
-import "aos/dist/aos.css"; 
 
 function Banner() {
-    useEffect(() => {
-        AOS.init();
-        AOS.refresh();
-      });
   return (
-    <div className='py-10 px-0 md:px-44 container mt-0 md:mt-10' data-aos="flip-left">
+    <div className='py-10 px-0 md:px-44 container mt-0 md:mt-10'>
         <div className='bg-light-blue py-10 px-3 md:px-20 rounded-2xl'>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                 <div className='flex flex-col gap-3'>
