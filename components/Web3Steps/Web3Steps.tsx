@@ -10,7 +10,7 @@ function Web3Steps() {
   });
   return (
     <div
-      className="flex flex-col gap-2 py-4 px-20 container items-center justify-center"
+      className="flex flex-col gap-2 py-4 px-2 md:px-20 container items-center justify-center"
       data-aos="fade-up"
     >
       <h2 className="uppercase text-light-blue">THE SECURITY</h2>

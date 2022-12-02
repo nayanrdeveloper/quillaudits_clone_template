@@ -51,10 +51,10 @@ function Testimonial() {
     },
   ];
   return (
-    <div className="py-4 px-20 container mt-10" data-aos="zoom-out-right">
-      <div className="flex flex-col flex-wrap gap-3">
+    <div className="py-4 px-3 md:px-20 container mt-10" data-aos="zoom-out-right">
+      <div className="flex flex-col flex-wrap gap-3 md:gap-3">
         <h3 className="text-light-blue uppercase">Testimonial</h3>
-        <div className="flex justify-between">
+        <div className="flex flex-wrap gap-3 md:gap-0 justify-between">
           <span className="text-black font-semibold text-2xl">
             What our Clients are saying
           </span>

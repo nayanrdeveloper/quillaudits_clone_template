@@ -30,9 +30,9 @@ function SocialMedia() {
     <div className="flex flex-col gap-2 items-center justify-center" data-aos="zoom-in">
       <h5 className="font-semibold">Join our Journey</h5>
       <ul className="flex gap-4">
-        {socialMediaList.map((socialData) => {
+        {socialMediaList.map((socialData, index) => {
           return (
-            <li className="cursor-pointer">
+            <li className="cursor-pointer" key={index}>
               <Image
                 src={socialData.image}
                 alt={socialData.image}

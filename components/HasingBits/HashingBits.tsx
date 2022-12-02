@@ -9,8 +9,8 @@ function HashingBits() {
     AOS.refresh();
   });
   return (
-    <div className="py-10 px-20 container mt-10 bg-gradient-light-blue relative z-10">
-      <div className="flex justify-between gap-5" data-aos="fade-right">
+    <div className="py-10 px-3 md:px-20 container mt-10 bg-gradient-light-blue relative z-10">
+      <div className="flex flex-wrap justify-between gap-5" data-aos="fade-right">
         <div className="flex flex-col gap-3">
           <Image
             src={"/hasing_bits.svg"}
@@ -28,7 +28,7 @@ function HashingBits() {
           </p>
           <input
             type={"email"}
-            className="rounded-lg h-10 bg-[#0000004D] py-2 px-4 w-96"
+            className="rounded-lg h-10 bg-[#0000004D] py-2 px-4 md:w-96"
             placeholder="youremail@gmail.com"
           />
           <div className="flex gap-2 items-center">

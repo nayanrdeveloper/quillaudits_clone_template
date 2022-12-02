@@ -31,9 +31,9 @@ function MainSection() {
     },
   ];
   return (
-    <div className="container py-4 px-32 mt-10">
-      <div className="flex flex-col">
-        <div className="flex gap-3 justify-between items-center">
+    <div className="container py-4 px-3 md:px-32 mt-10">
+      <div className="flex gap-10 md:gap-0 flex-col">
+        <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center">
           <div data-aos="fade-right">
             <Image
               src={"/main_section.jpg"}
@@ -71,7 +71,7 @@ function MainSection() {
             </div>
           </div>
         </div>
-        <div className="flex gap-3 justify-between items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 justify-between items-center">
           <div className="flex flex-col gap-1" data-aos="fade-right">
             <h4 className="text-light-blue">Service</h4>
             <h3 className="text-light-black font-semibold text-2xl">
@@ -92,7 +92,7 @@ function MainSection() {
             />
           </div>
         </div>
-        <div className="flex gap-3 justify-between items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 justify-between items-center">
           <div data-aos="fade-right">
             <Image src={"/part_2.jpg"} alt={"main"} width={900} height={900} />
           </div>

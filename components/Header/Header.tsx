@@ -4,7 +4,7 @@ import Navbar from '../Navbar/Navbar'
 
 function Header() {
   return (
-    <div className='bg-gradient-light-blue'>
+    <div className='bg-gradient-light-blue container'>
         <div>
             <Navbar />
             <HeroSection />

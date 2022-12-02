@@ -57,10 +57,10 @@ function LatestWork() {
   ];
   return (
     <div className="bg-gradient-light-blue container" data-aos="fade-up">
-      <div className="py-4 px-20 flex flex-col gap-2 justify-center items-center">
+      <div className="py-4 px-3 md:px-20 flex flex-col gap-2 justify-center items-center">
         <h3 className="text-light-blue uppercase">Portfolio</h3>
         <h2 className="text-white font-semibold text-2xl">Latest Work</h2>
-        <div className="flex gap-5">
+        <div className="flex flex-wrap gap-5">
           {workFilterCategory.map((category, index) => {
             return (
               <div

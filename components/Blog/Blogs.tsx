@@ -29,13 +29,13 @@ function Blogs() {
     },
   ];
   return (
-    <div className="py-4 px-20 container mt-10" data-aos="zoom-out-left">
+    <div className="py-4 px-3 md:px-20 container mt-10" data-aos="zoom-out-left">
       <div className="flex flex-col flex-wrap gap-3">
         <h3 className="text-light-blue uppercase">OUR BLOG</h3>
         <h2 className="text-light-black font-semibold text-2xl">
           Catch up on the news
         </h2>
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
           {blogList.map((blog, index) => {
             return (
               <div key={index} className="flex flex-col gap-2 p-2">

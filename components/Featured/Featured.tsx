@@ -38,12 +38,12 @@ function Featured() {
   ];
   return (
     <div className="container" data-aos="fade-up">
-      <div className="py-4 px-20 flex flex-col gap-2 justify-center items-center">
+      <div className="py-4 px-3 md:px-20 flex flex-col gap-2 justify-center items-center">
         <h3 className="text-light-blue uppercase">MENTIONS</h3>
         <h2 className="text-light-black font-semibold text-2xl">
           As Featured In
         </h2>
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {featureList.map((feature) => {
             return (
               <div
