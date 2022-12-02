@@ -20,7 +20,7 @@ module.exports = {
       boxShadow: {
         'dark-blue': "5px 8px 10px #00000029",
         'filter': "3px 3px 6px #00000029",
-      }
+      },
     },
   },
   plugins: [],

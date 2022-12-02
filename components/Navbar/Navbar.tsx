@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 function Navbar() {
@@ -53,24 +54,26 @@ function Navbar() {
         </span>
       </div>
       <ul
-        className={`left absolute z-[-1] w-full pb-12 pl-5 transition-all duration-500 ease-in md:static md:z-auto md:flex md:w-auto md:items-center md:pb-0 md:pl-0 ${
-          open ? "top-20 opacity-100" : "top-[-490px] md:opacity-100 opacity-0"
+        className={`md:flex transition-all duration-500 ease-in ${
+          open ? "" : "hidden"
         }`}
       >
         {navList.map((navItem, index) => {
           return (
-            <li key={index} className="py-2 text-xl md:my-0 md:ml-8">
-              <a
-                href="1"
-                className="text-white duration-300 hover:text-gray-400"
+            <Link key={index} href={navItem.to}>
+              <li
+                key={index}
+                className="py-2 md:my-0 md:ml-8 hover:text-light-blue duration-300 cursor-pointer"
               >
                 {navItem.name}
-              </a>
-            </li>
+              </li>
+            </Link>
           );
         })}
-        <button className="btn-primary">Portfolio</button>
-        <button className="btn-primary">Request an Audit</button>
+        <div className="flex gap-3 md:gap-0">
+          <button className="btn-primary ">Portfolio</button>
+          <button className="btn-primary">Request an Audit</button>
+        </div>
       </ul>
     </div>
   );
